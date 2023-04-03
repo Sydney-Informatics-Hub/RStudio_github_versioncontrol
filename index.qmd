@@ -1,5 +1,5 @@
 ---
-title: "**Version control using RStudio and github**"
+title: "**Getting started with Git in RStudio: a hands-on guide**"
 output:
   html_document:
     toc: false

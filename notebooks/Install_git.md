@@ -11,8 +11,9 @@ from: markdown+emoji
 * Have you installed `Git` on your system?
 </div>
 </br>
+[Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle multiple versions of source code edits that are then transferred to files in a Git repository, [GitHub](https://github.com/) serves as a location for uploading copies of a Git repository.
 
-You need Git, so you can use it at the command line and so RStudio can call it.
+You need the Git tool to be installed and available at the command line, so that RStudio can call it.
 
 To check if git is installed, enter the following command in your command-line to request the path to your Git executable:
 ```default
