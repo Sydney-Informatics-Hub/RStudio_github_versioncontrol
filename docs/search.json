@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Version control using RStudio and github",
     "section": "",
-    "text": "This masterclass is about using GitHub as a backup and version control​ tool when specifically working with Rmarkdown (.Rmd) files. We have briefly discussed R, RStudio, git , what is version control and why using git for backup and version control is a good idea.\nThe following points will be discussed during the course of the master-class\nAll materials copyright Sydney Informatics Hub, University of Sydney"
+    "text": "This Masterclass is an opportunity for you to bring your own laptop and R project, and learn how to use Git and RStudio together for version control and collaboration.\nWe will provide hands-on assistance in getting Git and RStudio to communicate effectively.\nThis Masterclass will highlight the importance of making collaboration transparent for everyone, as well as the benefits of using version control to maintain a clear and comprehensive record of project development.\nWe will provide you with the tools and knowledge you need to collaborate more efficiently and keep your projects organized and reproducible.\nThe following points will be discussed during the course of the master-class\nAll materials copyright Sydney Informatics Hub, University of Sydney"
   },
   {
     "objectID": "index.html#trainers",
@@ -81,7 +81,7 @@
     "href": "index.html#target-audience",
     "title": "Version control using RStudio and github",
     "section": "Target audience",
-    "text": "Target audience\nThis masterclass is suitable for people who use R for data analysis and are keen to gain a basic understanding of how to use RStudio in backing up a project containing Rmarkdown files on a github server."
+    "text": "Target audience\nThis masterclass is suitable for people who use R for data analysis and are keen to gain a basic understanding of how to use RStudio in backing up a project containing Rmarkdown files on a github server.\nRemove this"
   },
   {
     "objectID": "index.html#how-to-navigate-the-webpages",

@@ -8,7 +8,14 @@ output:
 fig-cap-location: top
 ---
 
-This masterclass is about using  GitHub as a backup and version control​ tool when specifically working with Rmarkdown (.Rmd) files. We have briefly discussed R, RStudio, git , what is version control and why using git for backup and version control is a good idea.
+This Masterclass is an opportunity for you to bring your own laptop and R project, and learn how to use Git and RStudio together for version control and collaboration.
+
+We will provide hands-on assistance in getting Git and RStudio to communicate effectively.
+
+This Masterclass will highlight the importance of making collaboration transparent for everyone, as well as the benefits of using version control to maintain a clear and comprehensive record of project development.
+
+We will provide you with the tools and knowledge you need to collaborate more efficiently and keep your projects organized and reproducible.
+
 
 ![](/fig/about.png)
 
