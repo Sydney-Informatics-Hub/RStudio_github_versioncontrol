@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,10 +76,12 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="../setup.html">
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">Set-up</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Set-up</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-set-up">    
         <li>
     <a class="dropdown-item" href="../notebooks/Register_for_github_account.html">
@@ -96,7 +98,9 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">Git for version control</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Git for version control</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-git-for-version-control">    
         <li>
     <a class="dropdown-item" href="https://unisyd.sharepoint.com/:p:/r/teams/SydneyInformaticsHub2/_layouts/15/Doc.aspx?sourcedoc=%7BA2B9FBEB-02BA-4410-A516-A4B81F449F29%7D&amp;file=Rstudio%20and%20github.pptx&amp;action=edit&amp;mobileredirect=true">
@@ -159,20 +163,19 @@ ul.task-list li input[type="checkbox"] {
 <li>Do you have a github account?</li>
 </ul>
 </section>
-<p>If the answer to the above question is <code>No</code>, you will need to register for a free account with GitHub at <a href="https://github.com">https://github.com</a>. <img src="../fig/githubdotcom.png" class="img-fluid"> <br> Start with your email address and follow the instructions.</p>
-<p><br> Here are a few tips which you can follow with reference to choosing a good username.</p>
+<p>If the answer to the above question is <code>No</code>, you will need to register for a free account with GitHub at <a href="https://github.com" class="uri">https://github.com</a>. <img src="../fig/githubdotcom.png" class="img-fluid"> <br> Start with your email address and follow the instructions.</p>
+<p><br> Here are a few tips which you can follow with reference to choosing a good username:</p>
 <ul>
-<li>You can use your actual name which makes your username easier for people to guess or remember. Alos a shorter name is better than a longer one.</li>
-<li>In addition you might want to keep your github-name to be as unique as possible. GitHub auto-completes or suggests usernames in some settings.</li>
-<li>It is advised that you do not highlight your current university, employer, place of residence or other information which is time-based in your user-name as this is likely to change in the future.</li>
-<li>It is recommended to use all lowercase characters in your user-name. GitHub treats usernames in a case insensitive way, but using all lowercase could work better. A good strategy for word separation is to use a hyphen <code>-</code>.</li>
+<li>Your actual name makes your username easier for people to guess or remember;</li>
+<li>A shorter name is better than a longer one;</li>
+<li>Keep it as unique as possible. GitHub auto-completes or suggests usernames in some settings;</li>
+<li>Do not use your current university, employer, place of residence or other information which is time-based and are likely to change in the future;</li>
+<li>Use lowercase characters:</li>
+<li>A good strategy for word separation is to use a hyphen <code>-</code>.</li>
 </ul>
 <section id="free-private-repos" class="level2">
 <h2 class="anchored" data-anchor-id="free-private-repos">Free private repos</h2>
 <p>GitHub offers free unlimited private repositories for all users. These free private repositories support up to three external collaborators, making them a perfect place for your personal projects, for job applications, and testing things out before making your project open source.</p>
-<section id="key-points" class="level3 unlisted keypoints">
-<h3 class="unlisted anchored" data-anchor-id="key-points"><strong>Key points</strong></h3>
-</section>
 
 
 </section>
@@ -220,7 +223,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -256,24 +276,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

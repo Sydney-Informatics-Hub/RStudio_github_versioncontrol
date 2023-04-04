@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -139,10 +139,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="../setup.html">
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">Set-up</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Set-up</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-set-up">    
         <li>
     <a class="dropdown-item" href="../notebooks/Register_for_github_account.html">
@@ -159,7 +161,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">Git for version control</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Git for version control</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-git-for-version-control">    
         <li>
     <a class="dropdown-item" href="https://unisyd.sharepoint.com/:p:/r/teams/SydneyInformaticsHub2/_layouts/15/Doc.aspx?sourcedoc=%7BA2B9FBEB-02BA-4410-A516-A4B81F449F29%7D&amp;file=Rstudio%20and%20github.pptx&amp;action=edit&amp;mobileredirect=true">
@@ -227,17 +231,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Have you installed <code>Git</code> on your system?</li>
 </ul>
 </section>
-<p><br> <a href="https://git-scm.com/">Git</a> is a free and open source distributed version control system designed to handle multiple versions of source code edits that are then transferred to files in a Git repository, <a href="https://github.com/">GitHub</a> serves as a location for uploading copies of a Git repository.</p>
-<p>You need the Git tool to be installed and available at the command line, so that RStudio can call it.</p>
-<p>To check if git is installed, enter the following command in your command-line to request the path to your Git executable:</p>
+<p><a href="https://git-scm.com/">Git</a> is a free and open source distributed version control system designed to handle multiple versions of source code edits that are then transferred to files in a Git repository. <a href="https://github.com/">GitHub</a> serves as a location for uploading copies of a Git repository.</p>
+<p>You need the Git tool to be installed on your laptop.</p>
+<p>To check if git is installed, enter the following command in your command-line to request the path to your <strong>Git executable</strong>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>which git</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>## /usr/bin/git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> and git –version to see its version:</p>
+<p>and <strong>Git version</strong>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git --version</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>## git version 2.39.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If either/or both the command do not generate results similar to above,instead, you see something more like</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git: command not found, </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> please proceed to install git by following the instructions appropriate to your operating system.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git: command not found</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>please proceed to install git by following the instructions below.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -253,31 +257,30 @@ Note
 </div>
 <section id="windows" class="level2">
 <h2 class="anchored" data-anchor-id="windows"><strong>Windows</strong></h2>
-<p><strong>Option 1</strong> (highly recommended): Install Git for Windows, also known as <code>msysgit</code> or <code>Git Bash</code>, to get Git in addition to some other useful tools, such as the Bash shell.</p>
-<p>THis option to insatll git is recommended because Git for Windows leaves the Git executable in a conventional location, which will help you and other programs, e.g.&nbsp;RStudio, find it and use it. This also supports a transition to more expert use, because the ‘Git Bash’ shell will be useful as you venture outside of R/RStudio.</p>
-<p><strong>NOTE</strong>: When asked aboutAdjusting your PATH environment, make sure to select <code>Git from the command line and also from 3rd-party software</code>. Otherwise, we believe it is good to accept the defaults. Note that RStudio for Windows prefers for Git to be installed below <code>C:/Program Files</code> and this appears to be the default. This implies, for example, that the Git executable on my Windows system is found at <code>C:/Program Files/Git/bin/git.exe</code>. Unless you have specific reasons to otherwise, follow this convention.</p>
+<p><strong>Option 1</strong> (highly recommended): Install Git for Windows, also known as <code>msysgit</code> or <code>Git Bash</code>, to get Git in addition to some other useful tools, such as the Bash shell. Follow <a href="https://git-scm.com/download/win">this link</a>!</p>
+<p>This option is recommended because Git for Windows leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the ‘Git Bash’ shell will be useful as you venture outside of R/RStudio.</p>
+<p><strong>NOTE</strong>: When asked about adjusting your PATH environment, make sure to select <code>Git from the command line and also from 3rd-party software</code>. Otherwise, we believe it is good to accept the defaults. Note that RStudio for Windows prefers for Git to be installed below <code>C:/Program Files</code> and this appears to be the default. This implies, for example, that the Git executable on my Windows system is found at <code>C:/Program Files/Git/bin/git.exe</code>. Unless you have specific reasons to otherwise, follow this convention.</p>
 <p><strong>Option 2</strong> (recommended): Install Git for Windows via the ‘Chocolatey’ package manager. <br>Chocolatey is like <code>apt-get</code> or <code>Homebrew</code>, but for Windows instead of Debian/Ubuntu Linux or macOS. Using Chocolatey to install Git for Windows gives the same result as installing it yourself using ‘Option 1’.</p>
 <p>This requires that you already have <code>Chocolatey</code> installed or that you are up for installing it. The instructions for installing <code>Chocolatey</code> are <a href="https://chocolatey.org/install">here</a>. This may be worthwhile if it seems likely you will be installing more open source software in the future.</p>
 <p>After you install Chocolatey, in a shell (Appendix A), do:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>choco install git.install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br>This installs the most current Git (Install) X.Y.Z Chocolatey package. At the time of writing, that is <code>Git (Install) 2.33.1</code>, but that version number will increment over time.</p>
+<p>This installs the most current Git (Install) X.Y.Z Chocolatey package. At the time of writing, that is <code>Git (Install) 2.33.1</code>, but that version number will increment over time.</p>
 <section id="updating-git-for-windows" class="level3">
 <h3 class="anchored" data-anchor-id="updating-git-for-windows">Updating Git for Windows</h3>
-<p><br>If you already have Git for Windows, but it’s not the latest version, it’s a good idea to update. Since v2.16, you can update like so from the command line:</p>
+<p>If you already have Git for Windows, but it’s not the latest version, it’s a good idea to update. Since v2.16, you can update like so from the command line:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git update-git-for-windows</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="macos" class="level2">
 <h2 class="anchored" data-anchor-id="macos"><strong>macOS</strong></h2>
-<p><strong>Option 1</strong> (highly recommended): Install the Xcode command line tools (not all of Xcode), which includes Git. <br>Go to the shell and enter one of these commands to elicit an offer to install developer command line tools:</p>
+<p><strong>Option 1</strong> (highly recommended): on your terminal, enter one of these commands to elicit an offer to install developer command line tools:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>git --version</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>git config</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> Accept the offer! Click on <code>Install</code>.</p>
-<p><br> Here’s another way to request this installation, more directly:</p>
+<p>Accept the offer! Click on <code>Install</code>.</p>
+<p>Here’s another way to request this installation, more directly:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>xcode-select --install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Option 2</strong> (recommended): Install Git from <a href="http://git-scm.com/downloads">here</a></p>
-<p><br>This method will certainly get you the latest version of Git of all approaches described here. <br>The GitHub home for the macOS installer is <a href="https://github.com/timcharper/git_osx_installer">here</a>. At that link, you can find more info if something goes wrong or you are working on an old version of macOS.</p>
-<p><strong>Option 3</strong> (recommended): If you anticipate getting heavily into scientific computing, you’re going to be installing and updating lots of software. You should check out <a href="https://brew.sh/">Homebrew</a>, “the missing package manager for OS X”. Among many other things, it can install Git for you. Once you have Homebrew installed, do this in the shell:</p>
+<p><strong>Option 2</strong> (recommended): Install Git from <a href="http://git-scm.com/downloads">here</a>. This method will certainly get you the latest version of Git of all approaches described above. The GitHub home for the macOS installer is <a href="https://github.com/timcharper/git_osx_installer">here</a>. At that link, you can find more info if something goes wrong or you are working on an old version of macOS.</p>
+<p><strong>Option 3</strong>: If you anticipate getting heavily into scientific computing, you’re going to be installing and updating lots of software. You should check out <a href="https://brew.sh/">Homebrew</a>, “the missing package manager for OS X”. Among many other things, it can install Git for you. Once you have Homebrew installed, do this in the shell:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>brew install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="linux" class="level2">
@@ -288,13 +291,6 @@ Note
 <p>Fedora or RedHat Linux:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sudo yum install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br> Click <a href="https://git-scm.com/download/linux">here</a> for a comprehensive list for various Linux and Unix package managers.</p>
-<div class="challenge">
-
-</div>
-<p><br></p>
-<section id="key-points" class="level3 unlisted keypoints">
-<h3 class="unlisted anchored" data-anchor-id="key-points"><strong>Key points</strong></h3>
-</section>
 
 
 </section>
@@ -342,7 +338,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -378,24 +391,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

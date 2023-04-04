@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,10 +76,12 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="../setup.html">
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">Set-up</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Set-up</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-set-up">    
         <li>
     <a class="dropdown-item" href="../notebooks/Register_for_github_account.html">
@@ -96,7 +98,9 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">Git for version control</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Git for version control</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-git-for-version-control">    
         <li>
     <a class="dropdown-item" href="https://unisyd.sharepoint.com/:p:/r/teams/SydneyInformaticsHub2/_layouts/15/Doc.aspx?sourcedoc=%7BA2B9FBEB-02BA-4410-A516-A4B81F449F29%7D&amp;file=Rstudio%20and%20github.pptx&amp;action=edit&amp;mobileredirect=true">
@@ -140,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#make-local-changes-save-commit" id="toc-make-local-changes-save-commit" class="nav-link active" data-scroll-target="#make-local-changes-save-commit"><strong>Make local changes, save, commit</strong></a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#make-local-changes-save-commit-1" id="toc-make-local-changes-save-commit-1" class="nav-link" data-scroll-target="#make-local-changes-save-commit-1"><strong>Make local changes, save, commit</strong></a></li>
   <li><a href="#push-your-local-changes-online-to-github" id="toc-push-your-local-changes-online-to-github" class="nav-link" data-scroll-target="#push-your-local-changes-online-to-github"><strong>Push your local changes online to GitHub</strong></a></li>
   <li><a href="#confirm-the-local-change-propagated-to-the-github-remote" id="toc-confirm-the-local-change-propagated-to-the-github-remote" class="nav-link" data-scroll-target="#confirm-the-local-change-propagated-to-the-github-remote">Confirm the local change propagated to the GitHub remote</a></li>
@@ -164,49 +168,45 @@ ul.task-list li input[type="checkbox"] {
 <p><br></p>
 <section id="make-local-changes-save-commit-1" class="level3">
 <h3 class="anchored" data-anchor-id="make-local-changes-save-commit-1"><strong>Make local changes, save, commit</strong></h3>
-<p>In our project, we can perform to independant tasks</p>
+<p>In our project, we can perform to independent tasks.</p>
 <ol type="1">
 <li>In RStudio, click on the README.md file, and edit it e.g., by adding the line “This is a line from RStudio”. Save your changes.Commit these changes to your local repo.</li>
 </ol>
 <p>How do you do that? <br>In RStudio:</p>
 <ul>
-<li>Click the “Git” tab in upper right pane.</li>
-<li>Check “Staged” box for README.md.</li>
-<li>If you’re not already in the Git pop-up, click “Commit”.</li>
-<li>Type a message in “Commit message”, such as “Commit from RStudio”.</li>
+<li>Click the “Git” tab in upper right pane;</li>
+<li>Check “Staged” box for README.md;</li>
+<li>If you’re not already in the Git pop-up, click “Commit”;</li>
+<li>Type a message in “Commit message”, such as “Commit from RStudio”;</li>
 <li>Click “Commit”.</li>
 </ul>
 <p><img src="../fig/commit_steps_final.png" style="width:100%; height:100%;"></p>
+<ol start="2" type="1">
+<li>Since we primarily work with Rmarkdown files when using RStudio, we can try and repeat the above steps for a Rmarkdown file:</li>
+</ol>
+<ul>
+<li>In RStudio <code>File -&gt; New File -&gt; R Markdown;</code></li>
+<li>The Rmarkdown file contains default code to generate some plots;</li>
+<li>Once you create the new file, this change can be directly staged to the GitHub repo by repeating the above steps.</li>
+</ul>
 </section>
 <section id="push-your-local-changes-online-to-github" class="level3">
 <h3 class="anchored" data-anchor-id="push-your-local-changes-online-to-github"><strong>Push your local changes online to GitHub</strong></h3>
 <p>Click the green arrow “Push” button to send your local changes to GitHub.</p>
 <p><img src="../fig/push_final.png" style="width:100%; height:100%;"></p>
-<p>Ideally you should not experience any isuse when pushing the changes to the github server as you have previously done similar push from the command line - on the Setup page <a href="http://localhost:5411/notebooks/Connections.html#make-a-local-change-then-commit-and-push">Is git connected to github?</a>.</p>
-<p>The RStudio’s Git pane provides a specific subset of command line Git though its interface. So, if your credentials work in the shell, they should work in RStudio. If you do experience a problem here, you can contact us after the session by email and we can discuss.</p>
+<p>Ideally you should not experience any issue when pushing the changes to the github server as you have previously done similar push from the command line.</p>
+<p>The RStudio’s Git pane provides a specific subset of command line Git through its interface. So, if your credentials work in the shell, they should work in RStudio.</p>
 </section>
 <section id="confirm-the-local-change-propagated-to-the-github-remote" class="level3">
 <h3 class="anchored" data-anchor-id="confirm-the-local-change-propagated-to-the-github-remote">Confirm the local change propagated to the GitHub remote</h3>
 <p>Go back to the browser. I assume we’re still viewing your new GitHub repo.</p>
 <p>Refresh.</p>
-<p>You should see the new “This is a line from RStudio” in the README.</p>
+<p>You should see the new “This is a line from RStudio” in the README and the new Rmarkdown file you have created within RStudio.</p>
 <p>If you click on “commits”, you should see one with the message “Commit from RStudio”.</p>
-<p>If you have made it this far, Congratulations! You have been successful in backing up chamges on you local machine using RStudio to the GitHub server.</p>
-<ol start="2" type="1">
-<li>Since we primarily work with Rmarkdown files when using RStudio, we can try and repeat the above steps for a Rmarkdown file. Please follow the following steps.</li>
-</ol>
-<ul>
-<li>In RStudio <code>File -&gt; New File -&gt; R Markdown</code></li>
-<li>The Rmarkdown file contans default code to generate some plots.</li>
-<li>Once you create a new file, this change can be directly pushed to the GitHub repo by repeating the above steps.</li>
-<li>And/or you can modify the script as per your requirement and then proceed to <code>push</code> and <code>commit</code> using the options avaiable in the “Git” tab in upper right pane of the RStudio.</li>
-</ul>
-</section>
-<section id="key-points" class="level3 unlisted keypoints">
-<h3 class="unlisted anchored" data-anchor-id="key-points"><strong>Key points</strong></h3>
-</section>
+<p>If you have made it this far, Congratulations! You have been successful in backing up changes on you local machine using RStudio to the GitHub server.</p>
 
 
+</section>
 </section>
 
 <p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->
@@ -251,7 +251,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -287,24 +304,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

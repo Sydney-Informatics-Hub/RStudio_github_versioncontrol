@@ -13,8 +13,10 @@ website:
           href: notebooks/Register_for_github_account.html
         - text: "Install git"
           href: notebooks/Install_git.html
+        - text: "Setup git credentials"
+          href: notebooks/Connections.html
         - text: "Install/update R and RStudio"
-          href: notebooks/Install_or_update_R_RStudio.html  
+          href: notebooks/Install_or_update_R_RStudio.html
       - text: "Git for version control"
         menu:
         - text: "Presentation"
@@ -27,14 +29,15 @@ website:
           href: notebooks/On_the_day_clone_the_repo_using_RStudio.html
         - text: "Push/Pull local Rmarkdown file using RStudio"
           href: notebooks/On_the_day_create_Rmarkdown_make_commit_changes_using_RStudio.html
-      
+
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
-          
+
 format:
   html:
     theme: simplex
     css: lesson.css
     toc: true
+    toc-depth: 5
     code-overflow: wrap
     highlight-style: github
 

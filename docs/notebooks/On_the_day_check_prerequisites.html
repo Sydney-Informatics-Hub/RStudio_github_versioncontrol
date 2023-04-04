@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,10 +76,12 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="../setup.html">
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">Set-up</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Set-up</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-set-up">    
         <li>
     <a class="dropdown-item" href="../notebooks/Register_for_github_account.html">
@@ -96,7 +98,9 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">Git for version control</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Git for version control</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-git-for-version-control">    
         <li>
     <a class="dropdown-item" href="https://unisyd.sharepoint.com/:p:/r/teams/SydneyInformaticsHub2/_layouts/15/Doc.aspx?sourcedoc=%7BA2B9FBEB-02BA-4410-A516-A4B81F449F29%7D&amp;file=Rstudio%20and%20github.pptx&amp;action=edit&amp;mobileredirect=true">
@@ -160,13 +164,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <p><br></p>
-<p>If you can answer all of the above questions as <code>YES</code>, you are all set to go. Else please go back and refer to <code>Set-up</code> tabs. <br><br><strong>Please note</strong> <br>* This is a code-along master class. However due to limited time, we will not be in a position to address individual queries. <br>* The expectation is that we will try to introduce the attendies to all basic steps required to backup and version control <code>R markdown</code> files using the <code>RStudio</code> environment. <br>* The attendies can either try and follow the process and/or get back to us with specific queries after the master-class. We will then try and respond to all the quesries.</p>
+<p>If you can answer all of the above questions as <code>YES</code>, you are all set to go. Else please go back and refer to <code>Set-up</code> tabs or ask help to one of us. <br><br></p>
 <p><strong>As the first step</strong> you will need a test repository on GitHub. We will create a test repository and work with it for the purpose of this masterclass. <br>Please click <a href="create_a_repo_on_github.html">here</a> or select <code>Make a repo on github</code> in the <code>Git for version control</code> drop-down (Top menu-bar).</p>
 <section id="key-points" class="level3 unlisted keypoints">
 <h3 class="unlisted anchored" data-anchor-id="key-points"><strong>Key points</strong></h3>
 <ul>
-<li>Failures related to installations due to trivial (or not so trivial) problems are not uncommon - both due to an individuals operating system or even a the indviduals computer!</li>
-<li>If you have been unlucky, to be one of those who are stuck due to such installation/setup related issues, we can try and catchup later and identify the problem(s).</li>
+<li>Failures related to installations due to trivial (or not so trivial) problems are not uncommon - both due to an individuals operating system or even a the individuals computer!</li>
+<li>If you have been unlucky, to be one of those who are stuck due to such installation/setup related issues, we can try to identify the problem(s) together.</li>
 </ul>
 </section>
 
@@ -215,7 +219,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -251,24 +272,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
