@@ -16,44 +16,39 @@ This Masterclass will highlight the importance of making collaboration transpare
 
 We will provide you with the tools and knowledge you need to collaborate more efficiently and keep your projects organized and reproducible.
 
-
 ![](/fig/about.png)
-
 
 The following points will be discussed during the course of the master-class
 
-* Introduction to R/RStudio/R Markdown​
-* Importance of backup and version control​
-* Using GitHub for backup/ version control​
-* Introduce GitHub as a version control system​
-  * Advantages of using GitHub e.g. Collaboration and sharing​
-* Setting up a GitHub repository and backing it up​
-  * Discuss the basic resource requirements​
-  * Explain how to create a repository on GitHub and connect to it via local RStudio​
-  * Discuss how to make changes locally using RStudio and push the changes to the GitHub repository​
-* Sum up the key points discussed, and emphasize the importance of regularly backing up R markdown files using GitHub.​
+-   Introduction to R/RStudio/R Markdown​
+-   Importance of backup and version control​
+-   Using GitHub for backup/ version control​
+-   Introduce GitHub as a version control system​
+    -   Advantages of using GitHub e.g. Collaboration and sharing​
+-   Setting up a GitHub repository and backing it up​
+    -   Discuss the basic resource requirements​
+    -   Explain how to create a repository on GitHub and connect to it via local RStudio​
+    -   Discuss how to make changes locally using RStudio and push the changes to the GitHub repository​
+-   Sum up the key points discussed, and emphasize the importance of regularly backing up R markdown files using GitHub.​
 
-
-## **Target audience**{.unlisted}
+## **Target audience** {.unlisted}
 
 This masterclass is suitable for people who use R for data analysis and are keen to gain a basic understanding of how to use RStudio in backing up a project containing Rmarkdown files on a github server.
 
-Remove this
+## **How to navigate the webpages** {.unlisted}
 
-## **How to navigate the webpages**{.unlisted}
-* Please use the Menu bar to move between lessons. The submenus from main menu option `Setup` can be used to install the pre-requisites.  
-* The topics under the menu `Git for version control` touch on the individual steps which we will follow in todays code-along session.
-* Each main menu header has sub-header which will be visible when you click on the main-menu, as shown below.
+-   Please use the Menu bar to move between lessons. The submenus from main menu option `Set-up` can be used to install the pre-requisites.\
+-   The topics under the menu `Git for version control` touch on the individual steps which we will follow in todays code-along session.
+-   Each main menu header has sub-header which will be visible when you click on the main-menu, as shown below.
 
 ![](/fig/Menubar.png)
 
-## **Follow-on courses**{.unlisted}
-
+## **Follow-on courses** {.unlisted}
 
 ## **Course survey!** {.unlisted}
 
-Please fill out our **[course survey](https://www.surveymonkey.com/r/rnaseq2022)** before you leave! Help us help you!
+Please fill out our [**course survey**](https://redcap.sydney.edu.au/surveys/?s=FJ33MYNCRR&training=63&training_date=2023-04-27) before you leave! Help us help you!
 
-## **Credits**{.unlisted}
+## **Credits** {.unlisted}
 
-This masterclass is developed by the Sydney Informatics Hub, University of Sydney. 
+This masterclass is developed by the Sydney Informatics Hub, University of Sydney.

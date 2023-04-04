@@ -5,61 +5,41 @@ from: markdown+emoji
 
 # **Install or upgrade R and RStudio**
 
-<div class="questions">
-
+::: questions
 ### **Questions** {.unlisted}
-* Have you installed R? Do you have the latest version?
-* Have you installed RStudio? Do you have the latest version?
-</div>
-</br>
 
-::: {.callout-note}
-Do you have R installed on your system and if yes is the version current? 
+-   Have you installed R? Do you have the latest version?
+-   Have you installed RStudio? Do you have the latest version?
 :::
 
-<br>This is a good time to make sure your R installation is current.
-<br>**Check your current version** by using the command below:
+You need to have R as well as RStudio, a software application that makes R easier to use, installed on your computer.
 
-```default
+## Install R
+
+R is maintained by an international team of developers who make the language available through the web page of [The Comprehensive R Archive Network](https://cran.r-project.org). The top of the web page provides three links for downloading R. Follow the link that describes your operating system: **Windows**, **Mac**, or **Linux**.
+
+## Install RStudio
+
+RStudio is an application like Microsoft Word---except that instead of helping you write in English, RStudio helps you write in R. The RStudio interface looks the same for Windows, Mac OS, and Linux. You can [download RStudio](https://posit.co/products/open-source/rstudio/) for free. Click the "Download RStudio" button and follow the instructions that follow. Once you've installed RStudio, you can open it like any other program on your computer---usually by clicking an icon on your desktop.
+
+### Check your versions
+
+If you already have R and RStudio installed, this is a good time to make sure your installations is current.
+
+-   **Check your current R version** by opening RStudio and using the command below on the Console:
+
+``` default
 R.version.string
-#> [1] "R version 4.2.2 (2022-10-31)"
 ```
 
-## **Update your R packages:**
+-   **Check your current RStudio version** by opening RStudio and navigating through **Help** -\> **Check for updates**:
 
-```default
+![](../fig/Rstudioversion.png)
+
+-   **Update your R packages**
+
+Open RStudio and use the command below on the Console:
+
+``` default
 update.packages(ask = FALSE, checkBuilt = TRUE)
 ```
-
-You can check and install the latest pre-compiled binary of R for your OS from [here](https://cloud.r-project.org)
-
-
-## **Install RStudio Desktop.**
-Do you have RStudio installed on your system? 
-<br>This is a great time to upgrade to the latest Preview version. Download it [here](https://www.rstudio.com/products/rstudio/download/preview/)
-
-
-<!--
-<div class="challenge">
-
-### **Challenge for experienced CLI users** {.unlisted}
- 
-
-**Hint:** to work out what flags you will need to do this, run: 
-
-
-</div>  
-</br>
-
--->
-
-<div class="keypoints">
-
-### **Key points** {.unlisted}
-
-* The latest versions of R and RStudio need to be installed.
-</div>  
-
-
-
-  
