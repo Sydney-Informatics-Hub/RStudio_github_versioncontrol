@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -137,22 +137,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="../setup.html">
- <span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Set-up</span>
-    </a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-set-up" role="button" data-bs-toggle="dropdown" aria-expanded="false">Set-up</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-set-up">    
         <li>
     <a class="dropdown-item" href="../notebooks/Register_for_github_account.html">
- <span class="dropdown-text">Register a free GitHub account</span></a>
+ <span class="dropdown-text">Register a Setup GitHub account</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../notebooks/Install_git.html">
  <span class="dropdown-text">Install git</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/Connections.html">
+ <span class="dropdown-text">Setup git credentials</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../notebooks/Install_or_update_R_RStudio.html">
@@ -161,9 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Git for version control</span>
-    </a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-git-for-version-control" role="button" data-bs-toggle="dropdown" aria-expanded="false">Git for version control</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-git-for-version-control">    
         <li>
     <a class="dropdown-item" href="https://unisyd.sharepoint.com/:p:/r/teams/SydneyInformaticsHub2/_layouts/15/Doc.aspx?sourcedoc=%7BA2B9FBEB-02BA-4410-A516-A4B81F449F29%7D&amp;file=Rstudio%20and%20github.pptx&amp;action=edit&amp;mobileredirect=true">
@@ -172,10 +168,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li>
     <a class="dropdown-item" href="../notebooks/On_the_day_check_prerequisites.html">
  <span class="dropdown-text">Check prerequisites</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/Connections.html">
- <span class="dropdown-text">Check git to github connectivity</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../notebooks/On_the_day_create_a_test_repo.html">
@@ -206,9 +198,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#create-a-new-repository-on-github" id="toc-create-a-new-repository-on-github" class="nav-link active" data-scroll-target="#create-a-new-repository-on-github"><strong>Create a new repository on GitHub</strong></a>
+  <li><a href="#create-and-update-a-new-repository-on-github" id="toc-create-and-update-a-new-repository-on-github" class="nav-link active" data-scroll-target="#create-and-update-a-new-repository-on-github"><strong>Create and update a new repository on GitHub</strong></a>
   <ul>
-  <li><a href="#make-a-local-change-then-commit-and-push" id="toc-make-a-local-change-then-commit-and-push" class="nav-link" data-scroll-target="#make-a-local-change-then-commit-and-push"><strong>Make a local change, then commit, and push</strong></a></li>
+  <li><a href="#create-a-new-repository" id="toc-create-a-new-repository" class="nav-link" data-scroll-target="#create-a-new-repository"><strong>Create a new repository</strong></a></li>
+  <li><a href="#clone-the-new-repository-to-local-machine" id="toc-clone-the-new-repository-to-local-machine" class="nav-link" data-scroll-target="#clone-the-new-repository-to-local-machine"><strong>Clone the new repository to local machine</strong></a></li>
+  <li><a href="#make-a-local-change-commit-and-the-push-the-changes" id="toc-make-a-local-change-commit-and-the-push-the-changes" class="nav-link" data-scroll-target="#make-a-local-change-commit-and-the-push-the-changes"><strong>Make a local change, commit, and the push the changes</strong></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -218,37 +212,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="create-a-new-repository-on-github" class="level1">
-<h1><strong>Create a new repository on GitHub</strong></h1>
+<section id="create-and-update-a-new-repository-on-github" class="level1">
+<h1><strong>Create and update a new repository on GitHub</strong></h1>
 <section id="questions" class="level3 unlisted questions">
 <h3 class="unlisted anchored" data-anchor-id="questions"><strong>Questions</strong></h3>
 <ul>
-<li>Are you ready? Are all the pre-requisites satisfied?</li>
+<li>How to create your test repository?</li>
+<li>How to clone the new repo to local machine?</li>
+<li>How to push the local changes back to github?</li>
 </ul>
 </section>
-<p><br></p>
+<section id="create-a-new-repository" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-repository"><strong>Create a new repository</strong></h3>
+<p>For todays code-along session, you will need a test repository (or repo) on GitHub<br>
+- Go to <code>https://github.com/</code><br>
+- Log in (if not logged in already)<br>
+<br>
+- Click on the <code>+</code> symbol on the right hand top corner<br>
+- Select <code>New repository</code> <img src="../fig/create_a_repo.png" style="width:120%; height:150%;"></p>
+<p>This opens a new form as shown below. Please select the following options:<br>
+- <strong>Repository template</strong>: No template<br>
+- <strong>Repository name</strong>: <code>myrepo_masterclass_RStudio_github</code> or any other name of your choice<br>
+- <strong>Description</strong>: <code>Repository for testing my Git/GitHub setup</code> or similar<br>
+- Choose <code>Public</code><br>
+- Initialize this repository by checking the <code>Add a README file</code> option<br>
+- Click on <img src="../fig/create_repo.png" style="width:20%; height:20%;"> <img src="../fig/new_repo_fillin_parameters.png" style="width:100%; height:80%;"> This creates a new repository called <code>myrepo_masterclass_RStudio_github</code> or whatever name you have provided<br>
+<br>
+</p>
+</section>
+<section id="clone-the-new-repository-to-local-machine" class="level3">
+<h3 class="anchored" data-anchor-id="clone-the-new-repository-to-local-machine"><strong>Clone the new repository to local machine</strong></h3>
 <ul>
-<li>For todays code-along session, you will need a test repository (or repo) on GitHub.</li>
+<li>Click the big green button that says <img src="../fig/code.png" style="width:15%; height:15%;"><br>
+</li>
+<li>Copy the clone URL to your clipboard<br>
+</li>
+<li>Since we have created a PAT for HTTPS protocol , copy the HTTPS URL as shown below. <img src="../fig/HTTPS_protocol_URL.png" style="width:100%; height:100%;"></li>
 </ul>
-<p><img src="../fig/create_a_repo.png" style="width:150%; height:150%;"></p>
-<p><br>* Click on the <code>+</code> symbol on the right hand top corner. <br>* Select <code>New repository</code></p>
-<p><img src="../fig/new_repo_fillin_parameters.png" style="width:100%; height:100%;"></p>
-<p>Please select the following options in the above form. <br>* <strong>Repository template</strong>: No template. <br>* <strong>Repository name</strong>: myrepo or any other name of your choice. <br>* <strong>Description</strong>: “Repository for testing my Git/GitHub setup” or similar. <br>* Choose <code>Public</code>. <br>* Initialize this repository with: Add a README file. <br></p>
-<p>Now click the big green button that says <img src="../fig/code.png" style="width:20%; height:20%;"></p>
-<p>Copy the clone URL to your clipboard. Since we have created a PAT for HTTPS protocol , copy the HTTPS URL as shown below.</p>
-<p><img src="../fig/HTTPS_protocol_URL.png" style="width:100%; height:100%;"></p>
 <p>and type the following code on your terminal:</p>
-<p><code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>~/master_class % git clone https://github.com/Sydney-Informatics-Hub/myrepo_masterclass_RStudio_github.git </span>
+<p><code>git clone HTTPS_URL</code><br>
+e.g.&nbsp;<code>git clone myrepo_masterclass_RStudio_github</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>~/master_class % git clone https://github.com/Sydney-Informatics-Hub/myrepo_masterclass_RStudio_github.git</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Cloning into 'myrepo_masterclass_RStudio_github'...</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Username for 'https://github.com': nandan75</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Password for 'https://nandan75@github.com': </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>remote: Enumerating objects: 3, done.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>remote: Counting objects: 100% (3/3), done.</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>remote: Compressing objects: 100% (2/2), done.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Receiving objects: 100% (3/3), done.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>I have named my repo as `myrepo_masterclass_RStudio_github’ Please do a few checks with the local copy of the repos</p>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>remote: Enumerating objects: 3, done.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>remote: Counting objects: 100% (3/3), done.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Receiving objects: 100% (3/3), done.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I have named my repo as <code>myrepo_masterclass_RStudio_github</code>. Please do a few checks with the local copy of the repos</p>
 <p>Make this new repo your working directory, list its files, display the README, and get some information on its connection to GitHub:</p>
 <ul>
 <li>Make this new repo your working directory <code>cd myrepo_masterclass_RStudio_github</code></li>
@@ -256,9 +266,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Display the README <code>head README.md</code></li>
 <li>Get some information on its connection to GitHub <code>git remote show origin</code></li>
 </ul>
-<section id="make-a-local-change-then-commit-and-push" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-local-change-then-commit-and-push"><strong>Make a local change, then commit, and push</strong></h3>
-<p>Add a line to README and verify that git notices the change. Open the README file with a text editor and add some words like <em>“I am adding a line in my local copy”</em>. Then go back to your terminal and type the command below:</p>
+</section>
+<section id="make-a-local-change-commit-and-the-push-the-changes" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-local-change-commit-and-the-push-the-changes"><strong>Make a local change, commit, and the push the changes</strong></h3>
+<ul>
+<li>Add a line to README and verify that git notices the change<br>
+</li>
+<li>Open the README file with a text editor and add some words like <em>“I am adding a line in my local copy”</em><br>
+Go back to your terminal and type the command below:</li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>On branch main</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Your branch is up to date with 'origin/main'.</span>
@@ -326,24 +342,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
     setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -379,42 +378,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
       });
-    }
+      return popup.innerHTML;
+    });
   }
 });
 </script>

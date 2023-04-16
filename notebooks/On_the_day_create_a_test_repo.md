@@ -6,57 +6,58 @@ editor:
     wrap: sentence
 ---
 
-# **Create a new repository on GitHub**
+# **Create and update a new repository on GitHub**
 
 ::: questions
 ### **Questions** {.unlisted}
 
--   Are you ready? Are all the pre-requisites satisfied?
+- How to  create your test repository? 
+- How to clone the new repo to local machine?
+- How to push the local changes back to github?
 :::
 
-</br>
+### **Create a new repository**
+For todays code-along session, you will need a test repository (or repo) on GitHub  
+- Go to `https://github.com/`  
+- Log in (if not logged in already)  
+\
+- Click on the `+` symbol on the right hand top corner  
+- Select `New repository`
+<img src="../fig/create_a_repo.png" style="width:120%; height:150%;"/>
 
--   For todays code-along session, you will need a test repository (or repo) on GitHub.
+This opens a new form as shown below. Please select the following options:  
+- **Repository template**: No template  
+- **Repository name**: `myrepo_masterclass_RStudio_github` or any other name of your choice  
+- **Description**: `Repository for testing my Git/GitHub setup` or similar    
+- Choose `Public`    
+- Initialize this repository by checking the `Add a README file` option  
+- Click on <img src="../fig/create_repo.png" style="width:20%; height:20%;"/>
+<img src="../fig/new_repo_fillin_parameters.png" style="width:100%; height:80%;"/>
+This creates a new repository called `myrepo_masterclass_RStudio_github` or whatever name you have provided
+\
+\
 
-<img src="../fig/create_a_repo.png" style="width:150%; height:150%;"/>
+### **Clone the new repository to local machine**
+- Click the big green button that says <img src="../fig/code.png" style="width:15%; height:15%;"/>  
+- Copy the clone URL to your clipboard  
+- Since we have created a PAT for HTTPS protocol , copy the HTTPS URL as shown below.
+<img src="../fig/HTTPS_protocol_URL.png" style="width:100%; height:100%;"/>  
 
-<br>\* Click on the `+` symbol on the right hand top corner.
-<br>\* Select `New repository`
+and type the following code on your terminal:  
 
-<img src="../fig/new_repo_fillin_parameters.png" style="width:100%; height:100%;"/>
-
-Please select the following options in the above form.
-<br>\* **Repository template**: No template.
-<br>\* **Repository name**: myrepo or any other name of your choice.
-<br>\* **Description**: "Repository for testing my Git/GitHub setup" or similar.
-<br>\* Choose `Public`.
-<br>\* Initialize this repository with: Add a README file.
-<br>
-
-Now click the big green button that says <img src="../fig/code.png" style="width:20%; height:20%;"/>
-
-Copy the clone URL to your clipboard.
-Since we have created a PAT for HTTPS protocol , copy the HTTPS URL as shown below.
-
-<img src="../fig/HTTPS_protocol_URL.png" style="width:100%; height:100%;"/>
-
-and type the following code on your terminal:
-
-`git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git`
+`git clone HTTPS_URL`  
+e.g. `git clone myrepo_masterclass_RStudio_github`
 
 ``` default
-~/master_class % git clone https://github.com/Sydney-Informatics-Hub/myrepo_masterclass_RStudio_github.git 
+~/master_class % git clone https://github.com/Sydney-Informatics-Hub/myrepo_masterclass_RStudio_github.git
 Cloning into 'myrepo_masterclass_RStudio_github'...
-Username for 'https://github.com': nandan75
-Password for 'https://nandan75@github.com': 
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
-remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 ```
 
-I have named my repo as \`myrepo_masterclass_RStudio_github' Please do a few checks with the local copy of the repos
+I have named my repo as `myrepo_masterclass_RStudio_github`. Please do a few checks with the local copy of the repos
 
 Make this new repo your working directory, list its files, display the README, and get some information on its connection to GitHub:
 
@@ -65,11 +66,10 @@ Make this new repo your working directory, list its files, display the README, a
 -   Display the README `head README.md`
 -   Get some information on its connection to GitHub `git remote show origin`
 
-### **Make a local change, then commit, and push**
-
-Add a line to README and verify that git notices the change.
-Open the README file with a text editor and add some words like *"I am adding a line in my local copy"*. 
-Then go back to your terminal and type the command below:
+### **Make a local change, commit, and the push the changes**
+- Add a line to README and verify that git notices the change  
+- Open the README file with a text editor and add some words like *"I am adding a line in my local copy"*  
+Go back to your terminal and type the command below:  
 
 ``` default
 git status

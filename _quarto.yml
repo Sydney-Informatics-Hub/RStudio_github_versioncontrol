@@ -6,10 +6,9 @@ website:
   navbar:
     background: primary
     left:
-      - href: setup.md
       - text: "Set-up"
         menu:
-        - text: "Register a free GitHub account"
+        - text: "Register a Setup GitHub account"
           href: notebooks/Register_for_github_account.md
         - text: "Install git"
           href: notebooks/Install_git.md
@@ -29,13 +28,6 @@ website:
           href: notebooks/On_the_day_clone_the_repo_using_RStudio.md
         - text: "Create a Rmarkdown file locally and push changes to github using RStudio"
           href: notebooks/On_the_day_create_Rmarkdown_make_commit_changes_using_RStudio.md
-          href: notebooks/On_the_day_check_prerequisites.html
-        - text: "Check git to github connectivity"
-          href: notebooks/Connections.html
-        - text: "Use RStudio for RStudio and github connectivity"
-          href: notebooks/On_the_day_clone_the_repo_using_RStudio.html
-        - text: "Push/Pull local Rmarkdown file using RStudio"
-          href: notebooks/On_the_day_create_Rmarkdown_make_commit_changes_using_RStudio.html
 
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
