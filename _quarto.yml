@@ -32,16 +32,15 @@ website:
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
 
+
+
 format:
   html:
-   toc: true
-   theme:
-      light: flatly
-      dark: darkly
-   css: styles.scss
-   code-link: true
-   code-fold: false
-
+    theme: simplex
+    css: lesson.css
+    toc: true
+    code-overflow: wrap
+    highlight-style: github
 
 
 
