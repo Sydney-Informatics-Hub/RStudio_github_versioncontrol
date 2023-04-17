@@ -34,12 +34,13 @@ website:
 
 format:
   html:
-    theme: simplex
-    css: lesson.css
-    toc: true
-    toc-depth: 5
-    code-overflow: wrap
-    highlight-style: github
+   toc: true
+   theme:
+      light: flatly
+      dark: darkly
+   css: styles.scss
+   code-link: true
+   code-fold: false
 
 
 
