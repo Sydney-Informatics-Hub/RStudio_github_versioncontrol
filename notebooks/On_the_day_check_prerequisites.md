@@ -14,15 +14,6 @@ from: markdown+emoji
 -   Have you installed `RStudio`? Do you have the latest version?
 :::
 
-::: questions
-### **Questions** {.unlisted}
-
--   Have you registered for a `github account`?
--   Have you installed `Git`?
--   Have you installed `R`? Do you have the latest version?
--   Have you installed `RStudio`? Do you have the latest version?
-:::
-
 
 </br>
 
