@@ -101,3 +101,7 @@ Push the changes to github `git push`.
 
 The local changes should now be reflected into the `README.md` file on the github repo.
 Please check them.
+
+Note that if `git push` asks for your GitHub username and password, you should use your
+Personal Access Token as the password, not your GitHub password.
+

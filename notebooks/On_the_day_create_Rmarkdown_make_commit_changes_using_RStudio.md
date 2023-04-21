@@ -41,9 +41,12 @@ Click the green arrow "Push" button to send your local changes to GitHub.
 
 <img src="../fig/push_final.png" style="width:100%; height:100%;"/>
 
-Ideally you should not experience any issue when pushing the changes to the github server as you have previously done similar push from the command line  
+Ideally you should not experience any issue when pushing the changes to the github server as you have previously done similar push from the command line
 
 The RStudio's Git pane provides a specific subset of command line Git through its interface. So, if your credentials work in the shell, they should work in RStudio  
+
+Note that if RStudio asks for your Git username and password, you should use your
+Personal Access Token as the password, not your GitHub password.
 
 ### **Confirm the local change propagated to the GitHub remote**
 
