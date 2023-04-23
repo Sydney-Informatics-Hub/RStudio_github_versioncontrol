@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-set-up">    
         <li>
     <a class="dropdown-item" href="../notebooks/Register_for_github_account.html">
- <span class="dropdown-text">Register a Setup GitHub account</span></a>
+ <span class="dropdown-text">Register a GitHub account</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../notebooks/Install_git.html">
@@ -162,9 +162,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="make-local-changes-save-and-commit"><strong>Make local changes, save and commit</strong></h3>
 <p>In our project, we can perform the following independent tasks.</p>
 <ol type="1">
-<li>In RStudio, click on the README.md file, and edit it e.g., by adding a line - “This is a line from RStudio”. Save your changes.Commit these changes to your local repo.</li>
+<li>In RStudio, click on the README.md file, and edit it e.g., by adding a line - “This is a line from RStudio”. Save your changes.</li>
 </ol>
-<p>How do you do that?<br>
+<p><img src="../fig/untracked_changes.png" style="width:150%; height:150%;"> - The files marked with <img src="../fig/questionMark.png" style="width:5%; height:5%;"> in the git pane of RStudio, suggests that they are untracked. This means that git is not tracking versions of these files.<br>
+- Git will only keep track of modifications to files that it has been asked to manage, so you need to tell git which files to track.<br>
+- Tick the Staged checkbox for each file.</p>
+<p>Commit these changes to your local repo. <strong>How do you do that?</strong><br>
 <strong>In RStudio:</strong><br>
 - Click the “Git” tab in upper right pane<br>
 - Check “Staged” box for README.md<br>
@@ -189,6 +192,9 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="../fig/push_final.png" style="width:100%; height:100%;"></p>
 <p>Ideally you should not experience any issue when pushing the changes to the github server as you have previously done similar push from the command line</p>
 <p>The RStudio’s Git pane provides a specific subset of command line Git through its interface. So, if your credentials work in the shell, they should work in RStudio</p>
+<blockquote class="blockquote">
+<p>Note that if RStudio asks for your Git username and password, you should use your <code>Personal Access Token</code> as the password, not your GitHub password.</p>
+</blockquote>
 </section>
 <section id="confirm-the-local-change-propagated-to-the-github-remote" class="level3">
 <h3 class="anchored" data-anchor-id="confirm-the-local-change-propagated-to-the-github-remote"><strong>Confirm the local change propagated to the GitHub remote</strong></h3>

@@ -57,9 +57,7 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 ```
 
-I have named my repo as `myrepo_masterclass_RStudio_github`. Please do a few checks with the local copy of the repos
-
-Make this new repo your working directory, list its files, display the README, and get some information on its connection to GitHub:
+I have named my repo as `myrepo_masterclass_RStudio_github`. Let's do a few checks with the local copy of the repo.
 
 -   Make this new repo your working directory `cd myrepo_masterclass_RStudio_github`
 -   list all files `ls`
@@ -99,5 +97,16 @@ git commit -m "A commit from my local computer"`
 
 Push the changes to github `git push`.
 
+
+### **Confirm the local change propagated to the GitHub remote**
+Go back to the browser. I assume we’re still viewing your new GitHub repo.
+
+**Refresh**
+
+You should see the new "I am adding a line in my local copy"  in the README.
+
 The local changes should now be reflected into the `README.md` file on the github repo.
 Please check them.
+
+> Note that if `git push` asks for your GitHub username and password, you should use your
+`Personal Access Token` as the password, not your GitHub password.

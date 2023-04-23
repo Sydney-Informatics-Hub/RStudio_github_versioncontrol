@@ -15,7 +15,7 @@ from: markdown+emoji
 - In RStudio, start a new Project:  
 -   `File > New Project > Version Control > Git`    
 - In "Repository URL", paste the URL of your new GitHub repository. It will be something like this `https://github.com/Sydney-Informatics-Hub/myrepo_masterclass_RStudio_github.git`  
--   Accept the default project directory name, e.g. myrepo, which coincides with the GitHub repo name  
+-   Accept the default project directory name, e.g. myrepo_masterclass_RStudio_github, which coincides with the GitHub repo name  
 -   Keep a note of where the Project will be saved locally  
 -   Check "Open in new session"  
 -   Click "Create Project"  

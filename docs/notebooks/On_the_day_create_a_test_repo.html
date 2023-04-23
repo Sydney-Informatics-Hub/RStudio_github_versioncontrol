@@ -203,6 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#create-a-new-repository" id="toc-create-a-new-repository" class="nav-link" data-scroll-target="#create-a-new-repository"><strong>Create a new repository</strong></a></li>
   <li><a href="#clone-the-new-repository-to-local-machine" id="toc-clone-the-new-repository-to-local-machine" class="nav-link" data-scroll-target="#clone-the-new-repository-to-local-machine"><strong>Clone the new repository to local machine</strong></a></li>
   <li><a href="#make-a-local-change-commit-and-the-push-the-changes" id="toc-make-a-local-change-commit-and-the-push-the-changes" class="nav-link" data-scroll-target="#make-a-local-change-commit-and-the-push-the-changes"><strong>Make a local change, commit, and the push the changes</strong></a></li>
+  <li><a href="#confirm-the-local-change-propagated-to-the-github-remote" id="toc-confirm-the-local-change-propagated-to-the-github-remote" class="nav-link" data-scroll-target="#confirm-the-local-change-propagated-to-the-github-remote"><strong>Confirm the local change propagated to the GitHub remote</strong></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -258,8 +259,7 @@ e.g.&nbsp;<code>git clone myrepo_masterclass_RStudio_github</code></p>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>remote: Counting objects: 100% (3/3), done.</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Receiving objects: 100% (3/3), done.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>I have named my repo as <code>myrepo_masterclass_RStudio_github</code>. Please do a few checks with the local copy of the repos</p>
-<p>Make this new repo your working directory, list its files, display the README, and get some information on its connection to GitHub:</p>
+<p>I have named my repo as <code>myrepo_masterclass_RStudio_github</code>. Let’s do a few checks with the local copy of the repo.</p>
 <ul>
 <li>Make this new repo your working directory <code>cd myrepo_masterclass_RStudio_github</code></li>
 <li>list all files <code>ls</code></li>
@@ -294,7 +294,16 @@ Go back to your terminal and type the command below:</li>
 <p><strong>Note</strong> you always have to include a message with your commit.</p>
 </blockquote>
 <p>Push the changes to github <code>git push</code>.</p>
+</section>
+<section id="confirm-the-local-change-propagated-to-the-github-remote" class="level3">
+<h3 class="anchored" data-anchor-id="confirm-the-local-change-propagated-to-the-github-remote"><strong>Confirm the local change propagated to the GitHub remote</strong></h3>
+<p>Go back to the browser. I assume we’re still viewing your new GitHub repo.</p>
+<p><strong>Refresh</strong></p>
+<p>You should see the new “I am adding a line in my local copy” in the README.</p>
 <p>The local changes should now be reflected into the <code>README.md</code> file on the github repo. Please check them.</p>
+<blockquote class="blockquote">
+<p>Note that if <code>git push</code> asks for your GitHub username and password, you should use your <code>Personal Access Token</code> as the password, not your GitHub password.</p>
+</blockquote>
 
 
 </section>

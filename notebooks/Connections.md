@@ -35,7 +35,7 @@ Step 2 - Click on the **Setting** menu.
 
 Step 3 - From the Setting menu click on **Developer Settings**
 
-Step 4 - From the Developer Settings menu, click on **Personal access token**
+Step 4 - From the Developer Settings menu, click on **Personal access token**. For this class, select "Tokens (Classic)", not "Fine-grained tokens".
 
 Step 5 - From the Personal access token, click on the **Generate new Token button**.
 
