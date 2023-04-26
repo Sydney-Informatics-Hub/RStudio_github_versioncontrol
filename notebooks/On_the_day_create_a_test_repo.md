@@ -11,9 +11,7 @@ editor:
 ::: questions
 ### **Questions** {.unlisted}
 
-- How to  create your test repository? 
-- How to clone the new repo to local machine?
-- How to push the local changes back to github?
+- How to  create a test github repository? 
 :::
 
 ### **Create a new repository**
@@ -57,56 +55,14 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 ```
 
-I have named my repo as `myrepo_masterclass_RStudio_github`. Let's do a few checks with the local copy of the repo.
-
--   Make this new repo your working directory `cd myrepo_masterclass_RStudio_github`
--   list all files `ls`
--   Display the README `head README.md`
--   Get some information on its connection to GitHub `git remote show origin`
-
-### **Make a local change, commit, and the push the changes**
-- Add a line to README and verify that git notices the change  
-- Open the README file with a text editor and add some words like *"I am adding a line in my local copy"*  
-Go back to your terminal and type the command below:  
-
-``` default
-git status
-```
-
-``` default
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-    modified:   README.md
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
-Add the file with changes - README.md for commit step:
-
-``` default
-git add README.md
-git commit -m "A commit from my local computer"`
-[main 306de6f] A commit from my local computer
- 1 file changed, 1 insertion(+)
-```
-> **Note** you always have to include a message with your commit. 
-
-Push the changes to github `git push`.
+I have named my repo as `myrepo_masterclass_RStudio_github`. 
 
 
-### **Confirm the local change propagated to the GitHub remote**
-Go back to the browser. I assume we’re still viewing your new GitHub repo.
+::: keypoints
+### **Key points** {.unlisted}
 
-**Refresh**
+- You can choose to use an available template when creating a new repository .  
+- The choice of your repository being `Public` or `Private` needs to be carefully considered.
 
-You should see the new "I am adding a line in my local copy"  in the README.
+:::
 
-The local changes should now be reflected into the `README.md` file on the github repo.
-Please check them.
-
-> Note that if `git push` asks for your GitHub username and password, you should use your
-`Personal Access Token` as the password, not your GitHub password.

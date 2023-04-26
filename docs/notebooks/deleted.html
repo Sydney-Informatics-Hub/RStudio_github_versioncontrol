@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>on_the_day_create_a_test_repo</title>
+<title>deleted</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -198,11 +198,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#create-and-update-a-new-repository-on-github" id="toc-create-and-update-a-new-repository-on-github" class="nav-link active" data-scroll-target="#create-and-update-a-new-repository-on-github"><strong>Create and update a new repository on GitHub</strong></a>
-  <ul class="collapse">
-  <li><a href="#create-a-new-repository" id="toc-create-a-new-repository" class="nav-link" data-scroll-target="#create-a-new-repository"><strong>Create a new repository</strong></a></li>
-  <li><a href="#clone-the-new-repository-to-local-machine" id="toc-clone-the-new-repository-to-local-machine" class="nav-link" data-scroll-target="#clone-the-new-repository-to-local-machine"><strong>Clone the new repository to local machine</strong></a></li>
-  </ul></li>
+  <li><a href="#make-a-local-change-commit-and-the-push-the-changes" id="toc-make-a-local-change-commit-and-the-push-the-changes" class="nav-link active" data-scroll-target="#make-a-local-change-commit-and-the-push-the-changes"><strong>Make a local change, commit, and the push the changes</strong></a></li>
+  <li><a href="#confirm-the-local-change-propagated-to-the-github-remote" id="toc-confirm-the-local-change-propagated-to-the-github-remote" class="nav-link" data-scroll-target="#confirm-the-local-change-propagated-to-the-github-remote"><strong>Confirm the local change propagated to the GitHub remote</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -211,60 +208,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="create-and-update-a-new-repository-on-github" class="level1">
-<h1><strong>Create and update a new repository on GitHub</strong></h1>
-<section id="questions" class="level3 unlisted questions">
-<h3 class="unlisted anchored" data-anchor-id="questions"><strong>Questions</strong></h3>
+<section id="make-a-local-change-commit-and-the-push-the-changes" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-local-change-commit-and-the-push-the-changes"><strong>Make a local change, commit, and the push the changes</strong></h3>
 <ul>
-<li>How to create a test github repository?</li>
-</ul>
-</section>
-<section id="create-a-new-repository" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-new-repository"><strong>Create a new repository</strong></h3>
-<p>For todays code-along session, you will need a test repository (or repo) on GitHub<br>
-- Go to <code>https://github.com/</code><br>
-- Log in (if not logged in already)<br>
-<br>
-- Click on the <code>+</code> symbol on the right hand top corner<br>
-- Select <code>New repository</code> <img src="../fig/create_a_repo.png" style="width:120%; height:150%;"></p>
-<p>This opens a new form as shown below. Please select the following options:<br>
-- <strong>Repository template</strong>: No template<br>
-- <strong>Repository name</strong>: <code>myrepo_masterclass_RStudio_github</code> or any other name of your choice<br>
-- <strong>Description</strong>: <code>Repository for testing my Git/GitHub setup</code> or similar<br>
-- Choose <code>Public</code><br>
-- Initialize this repository by checking the <code>Add a README file</code> option<br>
-- Click on <img src="../fig/create_repo.png" style="width:20%; height:20%;"> <img src="../fig/new_repo_fillin_parameters.png" style="width:100%; height:80%;"> This creates a new repository called <code>myrepo_masterclass_RStudio_github</code> or whatever name you have provided<br>
-<br>
-</p>
-</section>
-<section id="clone-the-new-repository-to-local-machine" class="level3">
-<h3 class="anchored" data-anchor-id="clone-the-new-repository-to-local-machine"><strong>Clone the new repository to local machine</strong></h3>
-<ul>
-<li>Click the big green button that says <img src="../fig/code.png" style="width:15%; height:15%;"><br>
+<li>Add a line to README and verify that git notices the change<br>
 </li>
-<li>Copy the clone URL to your clipboard<br>
-</li>
-<li>Since we have created a PAT for HTTPS protocol , copy the HTTPS URL as shown below. <img src="../fig/HTTPS_protocol_URL.png" style="width:100%; height:100%;"></li>
+<li>Open the README file with a text editor and add some words like <em>“I am adding a line in my local copy”</em><br>
+Go back to your terminal and type the command below:</li>
 </ul>
-<p>and type the following code on your terminal:</p>
-<p><code>git clone HTTPS_URL</code><br>
-e.g.&nbsp;<code>git clone myrepo_masterclass_RStudio_github</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>~/master_class % git clone https://github.com/Sydney-Informatics-Hub/myrepo_masterclass_RStudio_github.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Cloning into 'myrepo_masterclass_RStudio_github'...</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>remote: Enumerating objects: 3, done.</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>remote: Counting objects: 100% (3/3), done.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Receiving objects: 100% (3/3), done.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>I have named my repo as <code>myrepo_masterclass_RStudio_github</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>On branch main</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Your branch is up to date with 'origin/main'.</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Changes not staged for commit:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  (use "git restore &lt;file&gt;..." to discard changes in working directory)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    modified:   README.md</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>no changes added to commit (use "git add" and/or "git commit -a")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add the file with changes - README.md for commit step:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git add README.md</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>git commit -m "A commit from my local computer"`</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>[main 306de6f] A commit from my local computer</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> 1 file changed, 1 insertion(+)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p><strong>Note</strong> you always have to include a message with your commit.</p>
+</blockquote>
+<p>Push the changes to github <code>git push</code>.</p>
 </section>
-<section id="key-points" class="level3 unlisted keypoints">
-<h3 class="unlisted anchored" data-anchor-id="key-points"><strong>Key points</strong></h3>
-<ul>
-<li>You can choose to use an available template when creating a new repository .<br>
-</li>
-<li>The choice of your repository being <code>Public</code> or <code>Private</code> needs to be carefully considered.</li>
-</ul>
-</section>
+<section id="confirm-the-local-change-propagated-to-the-github-remote" class="level3">
+<h3 class="anchored" data-anchor-id="confirm-the-local-change-propagated-to-the-github-remote"><strong>Confirm the local change propagated to the GitHub remote</strong></h3>
+<p>Go back to the browser. I assume we’re still viewing your new GitHub repo.</p>
+<p><strong>Refresh</strong></p>
+<p>You should see the new “I am adding a line in my local copy” in the README.</p>
+<p>The local changes should now be reflected into the <code>README.md</code> file on the github repo. Please check them.</p>
+<blockquote class="blockquote">
+<p>Note that if <code>git push</code> asks for your GitHub username and password, you should use your <code>Personal Access Token</code> as the password, not your GitHub password.</p>
+</blockquote>
 
 
 </section>

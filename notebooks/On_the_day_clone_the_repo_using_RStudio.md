@@ -23,4 +23,10 @@ from: markdown+emoji
 
 <img src="../fig/RStudio_create_project_and_connect.png" style="width:130%; height:100%;"/>  
 
-- And this is the new `Git` tab you should see next to your environment pane: ![](../fig/git+R.png)
+- And this is the new `Git` tab you should see next to your environment pane: <img src="../fig/git+R.png" style="width:100%; height:100%;"/>  
+
+::: keypoints
+### **Key points** {.unlisted}
+- RStudio allows seamless connectivity to github in a single step.  
+
+:::

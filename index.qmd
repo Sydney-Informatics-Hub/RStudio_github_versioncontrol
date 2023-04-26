@@ -8,13 +8,14 @@ output:
 fig-cap-location: top
 ---
 
-This Masterclass is an opportunity for you to bring your own laptop and R project, and learn how to use Git and RStudio together for version control and collaboration.
+This Masterclass is an opportunity for the attendees to bring their own laptop and a R project, and learn how to use Git and RStudio together for version control and collaboration.
 
-We will provide hands-on assistance in getting Git and RStudio to communicate effectively.
+We will provide hands-on assistance in getting Git and RStudio to communicate effectively.  
+We will provide you with the tools and knowledge you need to collaborate more efficiently and keep your projects organized and reproducible.  
 
-This Masterclass will highlight the importance of making collaboration transparent for everyone, as well as the benefits of using version control to maintain a clear and comprehensive record of project development.
+This Masterclass will highlight the benefits of using version control to maintain a clear and comprehensive record of project development.
 
-We will provide you with the tools and knowledge you need to collaborate more efficiently and keep your projects organized and reproducible.
+
 
 ![](/fig/about.png)
 
@@ -24,12 +25,13 @@ The following points will be discussed during the course of the master-class
 -   Importance of backup and version control​
 -   Using GitHub for backup/ version control​
 -   Introduce GitHub as a version control system​
-    -   Advantages of using GitHub e.g. Collaboration and sharing​
--   Setting up a GitHub repository and backing it up​
-    -   Discuss the basic resource requirements​
-    -   Explain how to create a repository on GitHub and connect to it via local RStudio​
-    -   Discuss how to make changes locally using RStudio and push the changes to the GitHub repository​
--   Sum up the key points discussed, and emphasize the importance of regularly backing up R markdown files using GitHub.​
+    
+The Hands-on session will involve setting up a GitHub repository and backing it up​  
+  
+-    Discuss the basic resource requirements​  
+-    Explain how to create a repository on GitHub and connect to it via local RStudio​  
+-    Discuss how to make changes locally using RStudio and push the changes to the GitHub repository​  
+-    Sum up the key points discussed, and emphasize the importance of regularly backing up R markdown files using GitHub  
 
 ## **Target audience** {.unlisted}
 
