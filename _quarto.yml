@@ -26,9 +26,10 @@ website:
           href: notebooks/On_the_day_create_a_test_repo.md
         - text: "Clone the test repo to your computer using RStudio"
           href: notebooks/On_the_day_clone_the_repo_using_RStudio.md
-        - text: "Create a Rmarkdown file locally and push changes to github using RStudio"
+        - text: "Make local changes, stage, commit and push them to github using RStudio"
           href: notebooks/On_the_day_make_commit_push_local_changes_using_RStudio.md
-
+        - text: "Similate a conflict and resolve it in RStudio" 
+          href: notebooks/On_the_day_simualate_and_resolve_conflict_using_RStudio.md
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
 

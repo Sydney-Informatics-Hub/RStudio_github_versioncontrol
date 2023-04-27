@@ -19,7 +19,7 @@ In our project, we can perform the following independent tasks.
 
 (1) In RStudio, click on the README.md file, and edit it e.g., by adding a line -  "This is a line from RStudio". Save your changes.
 
-<img src="../fig/untracked_changes.png" style="width:100%; height:100%;"/>
+<img src="../fig/untracked_changes.png" style="width:105%; height:105%;"/>
 - The files marked with <img src="../fig/questionMark.png" style="width:5%; height:5%;"/> in the git pane of RStudio, suggests that they are untracked. This means that git is not tracking versions of these files.  
 - Git will only keep track of modifications to files that it has been asked to manage, so you need to tell git which files to track.  
 - Tick the Staged checkbox for each file.
@@ -33,7 +33,7 @@ Commit these changes to your local repo.
 -   Type a message in "Commit message", such as "Commit from RStudio"  
 -   Click "Commit"  
 
-<img src="../fig/commit_steps_final_1.png" style="width:100%; height:100%;"/>
+<img src="../fig/commit_steps_final_1.png" style="width:120%; height:120%;"/>
 
 (2) Since we primarily work with Rmarkdown files when using RStudio, we can try and repeat the above steps for a Rmarkdown file:
 

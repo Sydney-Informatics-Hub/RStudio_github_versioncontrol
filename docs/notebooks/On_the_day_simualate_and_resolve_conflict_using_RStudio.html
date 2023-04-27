@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>on_the_day_clone_the_repo_using_rstudio</title>
+<title>on_the_day_simualate_and_resolve_conflict_using_rstudio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,9 +139,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#clone-the-github-repository-to-your-computer-using-rstudio" id="toc-clone-the-github-repository-to-your-computer-using-rstudio" class="nav-link active" data-scroll-target="#clone-the-github-repository-to-your-computer-using-rstudio"><strong>Clone the GitHub repository to your computer using RStudio</strong></a>
+  <li><a href="#conflict-in-git-and-how-does-rstudio-assist" id="toc-conflict-in-git-and-how-does-rstudio-assist" class="nav-link active" data-scroll-target="#conflict-in-git-and-how-does-rstudio-assist"><strong>Conflict in git and how does RStudio assist</strong></a>
   <ul class="collapse">
-  <li><a href="#connect-you-github-repo-to-rstudio" id="toc-connect-you-github-repo-to-rstudio" class="nav-link" data-scroll-target="#connect-you-github-repo-to-rstudio"><strong>Connect you github repo to RStudio</strong></a></li>
+  <li><a href="#what-are-conflicts-when-working-in-git" id="toc-what-are-conflicts-when-working-in-git" class="nav-link" data-scroll-target="#what-are-conflicts-when-working-in-git"><strong>What are conflicts when working in git</strong></a></li>
+  <li><a href="#simulating-a-conflict-for-a-user" id="toc-simulating-a-conflict-for-a-user" class="nav-link" data-scroll-target="#simulating-a-conflict-for-a-user"><strong>Simulating a conflict for a user</strong></a></li>
+  <li><a href="#resolving-the-conflict" id="toc-resolving-the-conflict" class="nav-link" data-scroll-target="#resolving-the-conflict"><strong>Resolving the conflict</strong></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -151,44 +153,61 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="clone-the-github-repository-to-your-computer-using-rstudio" class="level1">
-<h1><strong>Clone the GitHub repository to your computer using RStudio</strong></h1>
+<section id="conflict-in-git-and-how-does-rstudio-assist" class="level1">
+<h1><strong>Conflict in git and how does RStudio assist</strong></h1>
 <section id="questions" class="level3 unlisted questions">
 <h3 class="unlisted anchored" data-anchor-id="questions"><strong>Questions</strong></h3>
 <ul>
-<li>Are you ready to check RStudio and github connectivity?</li>
+<li>What is a conflict in git?</li>
 </ul>
 </section>
-<section id="connect-you-github-repo-to-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="connect-you-github-repo-to-rstudio"><strong>Connect you github repo to RStudio</strong></h3>
+<p><br></p>
+<section id="what-are-conflicts-when-working-in-git" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-conflicts-when-working-in-git"><strong>What are conflicts when working in git</strong></h3>
+<p>Conflicts can occur for various reasons:<br>
+- When two or more users make changes to the same file or files simultaneously, or<br>
+- When a user merges branches or commits that have diverged<br>
+- When Git detects a conflict, it stops the merge process and marks the affected file(s) with conflict markers that indicate the conflicting changes.</p>
+</section>
+<section id="simulating-a-conflict-for-a-user" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-a-conflict-for-a-user"><strong>Simulating a conflict for a user</strong></h3>
+<section id="step-1" class="level4">
+<h4 class="anchored" data-anchor-id="step-1"><strong>Step 1</strong></h4>
 <ul>
-<li>Open RStudio<br>
+<li>Make some text changes in your Readme.md file in RStudio<br>
 </li>
-<li>In RStudio, start a new Project:<br>
+<li>Stage (add), commit and push as before<br>
 </li>
-<li><code>File &gt; New Project &gt; Version Control &gt; Git</code><br>
-</li>
-<li>In “Repository URL”, paste the URL of your new GitHub repository. It will be something like this <code>https://github.com/Sydney-Informatics-Hub/myrepo_masterclass_RStudio_github.git</code><br>
-</li>
-<li>Accept the default project directory name, e.g.&nbsp;myrepo_masterclass_RStudio_github, which coincides with the GitHub repo name<br>
-</li>
-<li>Keep a note of where the Project will be saved locally<br>
-</li>
-<li>Check “Open in new session”<br>
-</li>
-<li>Click “Create Project”<br>
-</li>
-<li>You should find yourself in a new local RStudio Project that represents your test repo on GitHub. This should download the README.md file from GitHub. Look in RStudio’s file browser pane for the README.md file</li>
+<li>Are the changes reflected in the online repository?</li>
 </ul>
-<p><img src="../fig/RStudio_create_project_and_connect.png" style="width:130%; height:100%;"></p>
+</section>
+<section id="step-2" class="level4">
+<h4 class="anchored" data-anchor-id="step-2"><strong>Step 2</strong></h4>
 <ul>
-<li>And this is the new <code>Git</code> tab you should see next to your environment pane: <img src="../fig/git+R.png" style="width:100%; height:100%;"></li>
+<li>Go to the online repository and edit the Readme.md file (add/remove some lines) , commit the changes.</li>
 </ul>
+</section>
+<section id="step-3" class="level4">
+<h4 class="anchored" data-anchor-id="step-3"><strong>Step 3</strong></h4>
+<ul>
+<li>Get back to your RStudio and make additional changes and try to stage (add), commit and push them<br>
+</li>
+<li>Do you get a conflict?<br>
+<img src="../fig/conflicts.png" style="width:70%; height:70%;"></li>
+<li>Why do think this happened?</li>
+</ul>
+<p>A good workflow when working with git (either by yourself or in collaboration)-</p>
+<p><code>Pull -&gt; Edit -&gt; Add -&gt; Pull -&gt; Commit -&gt; Push</code></p>
+</section>
+</section>
+<section id="resolving-the-conflict" class="level3">
+<h3 class="anchored" data-anchor-id="resolving-the-conflict"><strong>Resolving the conflict</strong></h3>
+<p><img src="../fig/resolve_conflict.png" style="width:120%; height:120%;"></p>
 </section>
 <section id="key-points" class="level3 unlisted keypoints">
 <h3 class="unlisted anchored" data-anchor-id="key-points"><strong>Key points</strong></h3>
 <ul>
-<li>RStudio allows seamless connectivity to github in a single step.</li>
+<li>RStudio makes it easy to indetify and resolve conflicts</li>
 </ul>
 </section>
 
