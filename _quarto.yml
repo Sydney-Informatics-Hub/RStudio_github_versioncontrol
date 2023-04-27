@@ -19,7 +19,7 @@ website:
       - text: "Git for version control"
         menu:
         - text: "Presentation"
-          href: "https://unisyd.sharepoint.com/:b:/r/teams/SydneyInformaticsHub2/Shared%20Documents/1%20SIH%20Central%20Document%20Repository/Training/Outreach/SIH%20Masterclasses/RStudio_GitHub_masterclass/Rstudio%20and%20github%20270423.pdf?csf=1&web=1&e=gQ0GwU"
+          href: "https://unisyd.sharepoint.com/:b:/r/teams/SydneyInformaticsHub2/Shared%20Documents/1%20SIH%20Central%20Document%20Repository/Training/Outreach/SIH%20Masterclasses/RStudio_GitHub_masterclass/Rstudio%20and%20github%20270423.pdf?csf=1&web=1&e=2YZtfU"
         - text: "Check prerequisites"
           href: notebooks/On_the_day_check_prerequisites.md
         - text: "Create a test repo in github"
