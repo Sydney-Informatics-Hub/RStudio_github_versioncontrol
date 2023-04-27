@@ -75,5 +75,5 @@ $ git config -l
 ### **Key points** {.unlisted}
 
 If you're a new GitHub user and using HTTPS, you might be asked for your username and password.
-<br>**Note** Use you PAT and not your login password.
+<br>**Note** Use your PAT and not your login password.
 :::
